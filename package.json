@@ -1,7 +1,7 @@
 {
-  "name": "apostrophe",
-  "version": "2.74.0",
-  "description": "The Apostrophe Content Management System.",
+  "name": "pilot",
+  "version": "1.1.0",
+  "description": "The Pilot Content Management System based on ApostropheCMS.",
   "main": "index.js",
   "scripts": {
     "test": "mocha && eslint .",
@@ -9,9 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:apostrophecms/apostrophe.git"
+    "url": "git@github.com:snigbhaumik/pilot.git"
   },
   "keywords": [
+    "pilot",
+    "snigbhaumik",
+    "infoaxon",
     "apostrophe",
     "apostrophe-cms",
     "apostrophecms",
@@ -20,7 +23,7 @@
     "content management system",
     "punkave"
   ],
-  "author": "P'unk Avenue LLC",
+  "author": "Snig Bhaumik",
   "license": "MIT",
   "dependencies": {
     "@sailshq/lodash": "^3.10.3",
