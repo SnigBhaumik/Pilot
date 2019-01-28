@@ -24,7 +24,7 @@
 
 
 // Variables  ===================================
-@apos-z-index-modal: @apos-z-index-7;
+@apos-z-index-modal: @plt-z-index-7;
 @apos-modal-timing: 0.25s;
 @apos-modal-transition-curve: ease;
 
@@ -51,6 +51,10 @@
     height: 100%;
     overflow: auto;
   }
+}
+
+.apos-ui.apos-modal.apos-modal-slideable {
+  z-index: @plt-z-index-10;
 }
 
 // A modal nested as a view should be less aggressive about sizing and positioning
