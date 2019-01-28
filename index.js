@@ -393,7 +393,7 @@ module.exports = function(options) {
 
     self.moogOptions = {
       root: self.root,
-      bundles: [ 'apostrophe' ].concat(self.options.bundles || []),
+      bundles: [ '@snig.bhaumik/apostrophe' ].concat(self.options.bundles || []),
       localModules: self.options.modulesSubdir || self.options.__testLocalModules || (self.rootDir + '/lib/modules'),
       defaultBaseClass: 'apostrophe-module',
       nestedModuleSubdirs: self.options.nestedModuleSubdirs
