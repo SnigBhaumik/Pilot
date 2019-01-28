@@ -18,7 +18,7 @@ module.exports = function(options) {
   // to participate as a promise event emitter
   var self = {
     __meta: {
-      name: 'pilot'
+      name: 'apostrophe'
     }
   };
 
