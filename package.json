@@ -1,6 +1,6 @@
 {
   "name": "@snig.bhaumik/apostrophe",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "The Pilot Content Management System Core, based on ApostropheCMS.",
   "main": "index.js",
   "scripts": {
