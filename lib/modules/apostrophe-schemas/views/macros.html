@@ -45,8 +45,8 @@
       <ul class="nav nav-tabs nav-fill apos-schema-tabs" data-schema-tabs role="tablist">
         {%- if groups.length > 0 -%}
           {%- for group in groups -%}
-            {%- if group.fields.length -%}
-            <li class="apos-schema-tab{% if loop.first %} apos-active{% endif %} nav-item" data-apos-open-group="{{ group.name }}">
+          {%- if group.fields.length and not group.hideInUserForm -%}
+          <li class="apos-schema-tab{% if loop.first %} apos-active{% endif %} nav-item" data-apos-open-group="{{ group.name }}">
                 <a class="nav-link {% if loop.first %}show active{% endif %}" href="#tab-{{ __(group.name | d('')) }}" data-toggle="tab" role="tab">{{ __(group.label | d('')) }}</a>
             </li>
             {%- endif -%}
@@ -68,7 +68,7 @@
           <div class="apos-schema-group{% if loop.first %} apos-active active{% endif %} tab-pane" data-apos-group="{{ group.name }}" id="tab-{{ __(group.name | d('')) }}" role="tabpanel">
             <div class="apos-schema-group-inner">
               {%- for field in group.fields -%}
-                {%- if not field.contextual -%}
+                {%- if not field.hideInUserForm -%}
                   {{ apos.schemas.field(field, options.readOnly) }}
                 {%- endif -%}
               {%- endfor -%}
@@ -121,6 +121,10 @@
 {%- endmacro -%}
 
 {%- macro slug(field) -%}
+  {{ fieldset(field, stringBody) }}
+{%- endmacro -%}
+
+{%- macro email(field) -%}
   {{ fieldset(field, stringBody) }}
 {%- endmacro -%}
 

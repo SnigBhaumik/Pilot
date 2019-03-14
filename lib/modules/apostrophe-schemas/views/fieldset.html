@@ -3,13 +3,13 @@
   {# field names. We use this class with our $.findSafe plugin. #}
   {% set options = { 'id': apos.utils.generateId(), fieldClasses: field.fieldClasses, fieldAttributes: field.fieldAttributes } %}
   <fieldset class="apos-field apos-field-{{ field.type | css }} apos-field-{{ field.name | css }} {{ field.classes }} form-group row" data-name="{{ field.name }}" {{ field.attributes }}>
-      <div class="col">    
+      <div class="col-md-6">    
     <label for="{{ options.id }}" class="apos-field-label">{{ __(field.label | d('')) }}</label>
     {%- if field.help -%}
       <br/><small class="apos-field-help">{{ __(field.help) }}</small>
     {%- endif -%}
     </div>
-    <div class="col">
+    <div class="col-md-6">
     {{ bodyMacro(field, options) }}
     </div>
   </fieldset>
